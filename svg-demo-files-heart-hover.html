@@ -1,0 +1,161 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>SVG Animation Examples</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+         <style>
+
+             body {
+              padding:5% 25%;
+             }
+
+             .background-circle {
+                /*fill:red;*/
+                fill:#efecc9;
+             }
+
+            /*Various Styles for Demo's */
+
+            .heartbeat {
+              animation: heartpulse 3s infinite;
+              -ms-animation: heartpulse 3s infinite;
+              -webkit-animation: heartpulse 3s infinite;
+              transform-origin: center center;
+            }
+            #heart {
+              cursor:pointer;
+            }
+            #heart:hover > .heartbeat-state{
+              animation: heartpulse 3s infinite;
+              -ms-animation: heartpulse 3s infinite;
+              -webkit-animation: heartpulse 3s infinite;
+              transform-origin: center center;
+            }
+            .look-around {
+              /*fill:red;*/
+              fill:#054252;
+              animation-delay: 2s;
+              -ms-animation-delay: 2s;
+              -webkit-animation-delay: 2s;
+              animation: eye-slide 6s infinite;
+              -ms-animation: eye-slide 6s infinite;
+              -webkit-animation: eye-slide 6s infinite; 
+            }
+            .glitter {
+              animation: pulse .5s infinite;
+              -ms-animation: pulse .5s infinite;
+              -webkit-animation: pulse .5s infinite;
+            }
+            .little-line.glitter:nth-child(even){
+              animation-delay: .25s;
+              -ms-animation-delay: .25s;
+              -webkit-animation-delay: .25s;
+              animation-direction: alternate;
+              -ms-animation-animation-direction: alternate;
+              -webkit-animation-direction: alternate;
+            }
+
+            /* Heartpulse */
+
+            @-moz-keyframes heartpulse {
+              0% {transform: scale(1, 1); opacity: 1; }
+              50% { transform: scale(.95, .95); opacity: .5; }
+              100% { transform: scale(1, 1); opacity: 1; }
+            }
+            @-webkit-keyframes heartpulse {
+              0% {transform: scale(1, 1); opacity: 1; }
+              50% { transform: scale(.95, .95); opacity: .5; }
+              100% { transform: scale(1, 1); opacity: 1; }
+            }
+            @keyframes heartpulse {
+              0% { transform: scale(1, 1); opacity: 1; }
+              50% { transform: scale(.95, .95); opacity: .5; }
+              100% { transform: scale(1, 1); opacity: 1; }
+            }
+
+            /* Eye slide animation */
+
+            @-moz-keyframes eye-slide {
+              0% { transform: translateX(0); }
+              15% { transform: translateX(-2px); }
+              45% { transform: translateX(0); }
+              75% { transform: translateX(2px); }
+            }
+            @-webkit-keyframes eye-slide {
+              0% { transform: translateX(0); }
+              15% { transform: translateX(-2px); }
+              45% { transform: translateX(0); }
+              75% { transform: translateX(2px); }
+            }
+            @keyframes eye-slide {
+              0% {transform: translateX(0);}
+              15% {transform: translateX(-2px);}
+              45% {transform: translateX(0);}
+              75% {transform: translateX(2px);}
+            }
+
+            /* Pulse */
+
+            @-moz-keyframes pulse {
+              0% {opacity: 1;}
+              50% {opacity: .5;}
+              100% {opacity: 1;}
+            }
+            @-webkit-keyframes pulse {
+              0% {opacity: 1;}
+              50% {opacity: .5;}
+              100% {opacity: 1;}
+            }
+            @keyframes pulse {
+              0% {opacity: 1;}
+              50% {opacity: .5;}
+              100% {opacity: 1;}
+            }
+
+         </style>
+
+          <svg id="heart" class="section-svg-icons" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 266 266">
+             
+             <circle cx="133" cy="133" r="133" style="fill:#efecc9"></circle>
+
+             <path class="big-heart heartbeat-state" d="M81.8,172.4l46.5,45.2a8.4,8.4,0,0,0,11.9-.1l46.8-46.9.8-.8c6.7-7.5,13.3-16.2,13.3-32,0-23.6-17.7-42.8-39.5-42.8A37.9,37.9,0,0,0,134,107a37.9,37.9,0,0,0-27.5-12C84.7,95,67,114.2,67,137.8,67,152.1,72.8,163.4,81.8,172.4Z" transform="translate(-1.4 -2)" style="fill:none;stroke:#054252;stroke-miterlimit:10;stroke-width:7.4387596485613px"></path>
+
+             <path class="little-line glitter" d="M59.8,85.1h0a1.9,1.9,0,0,0,.2-2.9l-7.7-8a2.4,2.4,0,0,0-3.1-.2h0a1.8,1.8,0,0,0-.2,2.7l7.9,8.2A2.2,2.2,0,0,0,59.8,85.1Z" transform="translate(-1.4 -2)" style="fill:#054252"></path>
+
+             <path class="little-line glitter" d="M69.9,76a2.2,2.2,0,0,0,2.8.6h.1a1.9,1.9,0,0,0,.7-2.8l-6.3-8.8a2.3,2.3,0,0,0-3-.6h0a1.8,1.8,0,0,0-.7,2.7Z" transform="translate(-1.4 -2)" style="fill:#054252"></path>
+             
+             <path class="little-line glitter" d="M84.3,68.9a2.1,2.1,0,0,0,2.7,1h.1a2,2,0,0,0,1.1-2.7l-4.8-9.6a2.3,2.3,0,0,0-2.9-1h0a1.8,1.8,0,0,0-1.1,2.5Z" transform="translate(-1.4 -2)" style="fill:#054252"></path>
+             
+             <path class="little-line glitter" d="M99.6,63.6a2.1,2.1,0,0,0,2.5,1.4h.2a2,2,0,0,0,1.5-2.5l-3.2-10.1A2.2,2.2,0,0,0,97.9,51h0a1.9,1.9,0,0,0-1.5,2.4Z" transform="translate(-1.4 -2)" style="fill:#054252"></path>
+             
+             <path class="little-line glitter" d="M115.7,60.4a2.1,2.1,0,0,0,2.3,1.7h.2a2,2,0,0,0,1.8-2.3l-1.5-10.4a2.1,2.1,0,0,0-2.4-1.7h0a2,2,0,0,0-1.9,2.2Z" transform="translate(-1.4 -2)" style="fill:#054252"></path>
+             
+             <path class="little-line glitter" d="M134.2,60.9h.2a2.1,2.1,0,0,0,2.1-2l.2-10.5a2,2,0,0,0-2.1-2h0a2.1,2.1,0,0,0-2.2,1.9l-.2,10.5A2,2,0,0,0,134.2,60.9Z" transform="translate(-1.4 -2)" style="fill:#054252"></path>
+             
+             <path class="little-line glitter" d="M150.3,62.5h.2a2.1,2.1,0,0,0,2.4-1.6l1.9-10.5a2,2,0,0,0-1.8-2.2h0a2.2,2.2,0,0,0-2.5,1.6l-1.9,10.4A2,2,0,0,0,150.3,62.5Z" transform="translate(-1.4 -2)" style="fill:#054252"></path>
+             
+             <path class="little-line glitter" d="M166,65.8h.1a2.1,2.1,0,0,0,2.6-1.3l3.6-10.1a1.9,1.9,0,0,0-1.4-2.4h0a2.2,2.2,0,0,0-2.7,1.3l-3.5,10A2,2,0,0,0,166,65.8Z" transform="translate(-1.4 -2)" style="fill:#054252"></path>
+             
+             <path class="little-line glitter" d="M181.1,71.1h.1a2.2,2.2,0,0,0,2.7-.9l5.2-9.6a1.8,1.8,0,0,0-1-2.6h0a2.3,2.3,0,0,0-2.9.9l-5.1,9.4A2,2,0,0,0,181.1,71.1Z" transform="translate(-1.4 -2)" style="fill:#054252"></path>
+             
+             <path class="little-line glitter" d="M195.1,78.2h.1a2.2,2.2,0,0,0,2.8-.5l6.8-8.9a1.8,1.8,0,0,0-.6-2.7h0a2.3,2.3,0,0,0-3,.5l-6.6,8.7A1.9,1.9,0,0,0,195.1,78.2Z" transform="translate(-1.4 -2)" style="fill:#054252"></path>
+             
+             <path class="little-line glitter" d="M218.7,76.3h0a2.4,2.4,0,0,0-3.1.1l-7.9,7.7a1.9,1.9,0,0,0,.1,2.9h0a2.2,2.2,0,0,0,2.9-.1l8.1-7.9A1.8,1.8,0,0,0,218.7,76.3Z" transform="translate(-1.4 -2)" style="fill:#054252"></path>
+
+            </svg>
+            
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+    </body>
+</html>
